@@ -27,4 +27,9 @@ contract LXStudioNFT is ERC721A, Ownable {
     function setMintRate(uint256 _mintRate) public onlyOwner {
         mintRate = _mintRate;
     }
+    
+     function updateBaseURI(string memory _newURIAddress) external onlyOwner {
+        baseURI = _newURIAddress;
+    }
+
 }
