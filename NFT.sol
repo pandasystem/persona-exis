@@ -16,16 +16,14 @@ contract LXStudioNFT is ERC721A, Ownable {
         _safeMint(msg.sender, quantity);
     }
 
+
+// Placeholder withdraw function - TODO
     function withdraw() external payable onlyOwner {
         payable(owner()).transfer(address(this).balance);
     }
 
     function _baseURI() internal view override returns (string memory) {
         return baseURI;
-    }
-
-    function setMintRate(uint256 _mintRate) public onlyOwner {
-        mintRate = _mintRate;
     }
     
      function updateBaseURI(string memory _newURIAddress) external onlyOwner {
